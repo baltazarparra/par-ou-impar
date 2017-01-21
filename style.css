@@ -1,0 +1,129 @@
+:root {
+    --color-primary: #322c4a;
+    --color-secundary: #ab2948;
+    --font: 'Dosis', sans-serif;
+}
+
+button {
+    max-width: 120px;
+}
+
+body {
+    background-color: var(--color-primary);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: var(--color-secundary);
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    color: white;
+    position: absolute;
+    line-height: .8;
+    font-size: 5em;
+    font-weight: lighter;
+    top: -30px;
+    span {
+        display: block;
+        padding-left: 100px;
+    }
+}
+
+.main {
+    display: flex;
+    height: calc(100vh - 154px);
+    flex-direction: column;
+}
+
+.hands {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.hands-cpu {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 20px;
+    img {
+        max-width: 60px;
+        padding: 20px;
+    }
+}
+
+.hands-you {
+    flex: 1 1 auto;
+    text-align: center;
+    padding: 20px;
+    img {
+        max-width: 60px;
+        padding: 20px;
+    }
+}
+
+.score {
+    display: flex;
+    color: white;
+    flex: 1;
+    justify-content: center;
+    p {
+        margin: 0;
+    }
+}
+
+.score-you {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.score-cpu {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-secundary);
+    display: flex;
+    justify-content: center;
+    span {
+        color: white;
+        font-size: 1.2em;
+        padding: 8px;
+        font-weight: bold;
+        align-self: center;
+    }
+}
+
+.button {
+    flex: 1;
+    padding: 20px 12px;
+    margin: 20px;
+    border: 0;
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}

@@ -76,7 +76,7 @@ body {
 }
 
 .hands {
-    flex: 3;
+    flex: 2;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -87,8 +87,8 @@ body {
     text-align: center;
     padding: 20px;
     img {
-        max-width: 60px;
-        padding: 20px;
+        max-width: 100%;
+        padding: 20px 0;
     }
 }
 
@@ -97,8 +97,8 @@ body {
     text-align: center;
     padding: 20px;
     img {
-        max-width: 60px;
-        padding: 20px;
+        max-width: 100%;
+        padding: 20px 0;
     }
 }
 
@@ -156,4 +156,8 @@ body {
     &:hover {
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
+}
+
+.hands-cpu img {
+    transform: rotate(180deg);
 }

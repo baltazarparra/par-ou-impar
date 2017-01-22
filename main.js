@@ -13,6 +13,8 @@
     var $statusTitle = document.querySelector('[data-js="statusTitle"]');
 
     var app = (function appController() {
+        var userScore = 0;
+        var cpuScore = 0;
         return {
             init: function init() {
                 this.initEvents();
@@ -34,39 +36,45 @@
             handleResult: function handleResult(cpuChoice, userChoice, result) {
                 if (userChoice === 2 && result % 2 == 0) {
                     $statusTitle.textContent = 'Ganhou';
+                    userScore += 1;
                     app.winHandle(cpuChoice, userChoice, result);
                 } else if (userChoice === 2 && result % 2 != 0) {
                     $statusTitle.textContent = 'Perdeu';
+                    cpuScore += 1;
                     app.looseHandle(cpuChoice, userChoice, result);
                 } else if (userChoice === 1 && result % 2 != 0) {
                     $statusTitle.textContent = 'Ganhou';
+                    userScore += 1;
                     app.winHandle(cpuChoice, userChoice, result);
                 } else {
                     $statusTitle.textContent = 'Perdeu';
+                    cpuScore += 1;
                     app.looseHandle(cpuChoice, userChoice, result);
                 }
+                $scoreYou.textContent = userScore;
+                $scoreCpu.textContent = cpuScore;
             },
 
             winHandle: function winHandle(cpuChoice, userChoice, result) {
                 $handsYou.textContent = '';
                 $handsCpu.textContent = '';
-                var $text = document.createElement('h1');
-                var $text2 = document.createElement('h1');
-                $text.textContent = userChoice;
-                $text2.textContent = cpuChoice;
-                $handsYou.appendChild($text);
-                $handsCpu.appendChild($text2);
+                var $yourChoiceImg = document.createElement('img');
+                var $cpuChoiceImg = document.createElement('img');
+                $yourChoiceImg.setAttribute('src', 'svgs/' + userChoice + '.svg');
+                $cpuChoiceImg.setAttribute('src', 'svgs/' + cpuChoice + '.svg');
+                $handsYou.appendChild($yourChoiceImg);
+                $handsCpu.appendChild($cpuChoiceImg);
             },
 
             looseHandle: function looseHandle(cpuChoice, userChoice, result) {
                 $handsYou.textContent = '';
                 $handsCpu.textContent = '';
-                var $text = document.createElement('h1');
-                var $text2 = document.createElement('h1');
-                $text.textContent = userChoice;
-                $text2.textContent = cpuChoice;
-                $handsYou.appendChild($text);
-                $handsCpu.appendChild($text2);
+                var $yourChoiceImg = document.createElement('img');
+                var $cpuChoiceImg = document.createElement('img');
+                $yourChoiceImg.setAttribute('src', 'svgs/' + userChoice + '.svg');
+                $cpuChoiceImg.setAttribute('src', 'svgs/' + cpuChoice + '.svg');
+                $handsYou.appendChild($yourChoiceImg);
+                $handsCpu.appendChild($cpuChoiceImg);
             }
         };
     })();

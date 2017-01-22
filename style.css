@@ -8,6 +8,36 @@ button {
     max-width: 120px;
 }
 
+input {
+    position: absolute;
+    top: -20px;
+}
+
+input:checked + span {
+    background-color:#404040;
+    color:#F7F7F7;
+}
+
+label {
+    width:70px;
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+}
+
+label span {
+    text-align:center;
+    font-size: 20px;
+    padding:13px 0px;
+    display:block;
+}
+
+h1 {
+    color: white;
+}
+
 body {
     background-color: var(--color-primary);
     background-size: cover;

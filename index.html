@@ -14,30 +14,29 @@
     <header class="header">
         <h1 class="title">PAR OU <span>IMPAR?</span></h1>
     </header>
-    <div class="separator"></div>
     <main class="main" data-js="main">
         <div class="hands">
-            <div class="hands-you"></div>
-            <div class="hands-eu"></div>
+            <div class="hands-you" data-js="handsYou"></div>
+            <div class="hands-cpu" data-js="handsCpu"></div>
         </div>
         <div class="score">
             <div class="score-you">
-                <p data-js="score-you">00</p>
+                <p data-js="scoreYou">00</p>
                 <p>você</p>
             </div>
             <span>
-                <h1>Jogue!</h1>
+                <h1 data-js="statusTitle">Jogue!</h1>
             </span>
             <div class="score-cpu">
-                <p data-js="score-cpu">00</p>
+                <p data-js="scoreCpu">00</p>
                 <p>eu</p>
             </div>
         </div>
     </main>
     <footer class="footer">
-        <button class="button" type="button" data-js="button-par">PAR</button>
+        <button class="button" type="button" data-js="btnPar">PAR</button>
         <span>OU</span>
-        <button class="button" type="button" data-js="button-impar">IMPAR</button>
+        <button class="button" type="button" data-js="btnImpar">IMPAR</button>
     </footer>
 <script src="main.js"></script>
 </body>
